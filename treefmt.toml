@@ -1,0 +1,31 @@
+[formatter]
+[formatter.nix]
+command = "alejandra"
+includes = ["*.nix"]
+
+[formatter.prettier]
+command = "prettier"
+includes = [
+    "*.css",
+    "*.html",
+    "*.js",
+    "*.jsx",
+    "*.md",
+    "*.mdx",
+    "*.scss",
+    "*.ts",
+    "*.yaml",
+]
+
+[formatter.shell]
+command = "shfmt"
+includes = ["*.sh"]
+options = ["-i", "2", "-s", "-w"]
+
+[formatter.elixir]
+command = "mix"
+options = ["format"]
+includes = ["*.ex", "*.exs"]
+
+[global]
+excludes = [".conform.yaml", "treefmt.toml", ".editorconfig", "mix.nix"]
