@@ -142,7 +142,7 @@ let
 
       castore =
         let
-          version = "1.0.11";
+          version = "1.0.12";
           drv = buildMix {
             inherit version;
             name = "castore";
@@ -151,7 +151,7 @@ let
             src = fetchHex {
               inherit version;
               pkg = "castore";
-              sha256 = "e03990b4db988df56262852f20de0f659871c35154691427a5047f4967a16a62";
+              sha256 = "3dca286b2186055ba0c9449b4e95b97bf1b57b47c1f2644555879e659960c224";
             };
           };
         in
@@ -259,6 +259,13 @@ let
             inherit version;
             name = "vix";
             appConfigPath = ./config;
+
+            VIX_COMPILATION_MODE = "PLATFORM_PROVIDED_LIBVIPS";
+
+            nativeBuildInputs = with pkgs; [
+              pkg-config
+              vips
+            ];
 
             src = fetchHex {
               inherit version;

@@ -1,5 +1,7 @@
 # Image test
 
+Fixed by deps-nix at commit `d4cfd6049ef800f6fd482f6f422c05fef54133b4`.
+
 Trying build a project with [Image](https://github.com/elixir-image/image) as dependency.
 
 ```

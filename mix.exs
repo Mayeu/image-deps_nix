@@ -25,7 +25,10 @@ defmodule Photo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:deps_nix, "~> 2.2", only: :dev},
+      {:deps_nix,
+       git: "https://github.com/code-supply/deps_nix",
+       ref: "d4cfd6049ef800f6fd482f6f422c05fef54133b4",
+       only: :dev},
       {:image, "~> 0.56"}
     ]
   end
